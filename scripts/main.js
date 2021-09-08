@@ -55,23 +55,23 @@ let woodenItems = _.reject(items, element => {
 // });
 
 
-// let eightOrMore = _.filter(items, element => {
-//     return element.materials.length >= 8;
-// }).forEach(element => {
-//     console.log(`${element.title} has ${element.materials.length} materials`);
-//     element.materials.forEach(element => {
-//         console.log(`${element}`)
-//     });
-// });
+let eightOrMore = _.filter(items, element => {
+    return element.materials.length >= 8;
+}).forEach(element => {
+    console.log(`${element.title} has ${element.materials.length} materials`);
+    element.materials.forEach(element => {
+        console.log(`${element}`)
+    });
+});
 
 //////////////// Items made by sellers ///////////////////////
 
-let madeBySellers = items.reduce((accum, element) => {
+let madeBySellers = _.transform(items, (result, element) => {
     if (element['who_made'] === 'i_did') {
-        return accum + 1;
+        result.push(element);
     }
-    return accum;
-}, 0);
+    return result;
+}, []);
 
-//console.log(`${madeBySellers} were made by their sellers`);
+console.log(`${madeBySellers.length} were made by their sellers`);
 
