@@ -5,11 +5,15 @@
 
 ///////////////////AVERAGE PRICE OF ALL ITEMS///////////////////
 
-let average = (items.reduce((accum, element) => {
-    return accum + element.price;
-},0) / items.length).toFixed(2);
+// let average = (items.reduce((accum, element) => {
+//     return accum + element.price;
+// },0) / items.length).toFixed(2);
 
-//console.log(`$${average}`);
+let average = (_.reduce(items, (accum, element) => {
+    return accum + element.price;
+}, 0) / items.length).toFixed(2);
+
+console.log(`$${average}`);
 
 //////////////ARRAY OF ITEMS THAT COST BETWEEN $14-$18//////////
 
