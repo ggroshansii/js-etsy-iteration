@@ -21,23 +21,18 @@ console.log(`$${average}`);
 //     return element.price > 14 && element.price < 18;
 // });
 
-// let specificItems = items.filter(element => {
-//     return element.price > 14 && element.price < 18;
-// });
-
-
 let specificItems = _.filter(items, element => {
     return element.price >= 14 && element.price <= 18;
 });
 
-console.log(specificItems);
+console.log(`Items that cost between $14.00 USD and $18.00 USD:\n`, specificItems);
 
 ///////////////////GBP currency code items////////////////
-let itemsGBP = items.filter(element => {
-    return element.currency_code === "GBP"
+let itemsGBP = _.reject(items, element => {
+    return element.currency_code !== "GBP"
 });
 
-//console.log(`${itemsGBP[0].title} costs ${itemsGBP[0].price}`)
+console.log(`${itemsGBP[0].title} costs ${itemsGBP[0].price}`)
 
 ////////////////Items made of wood///////////////////////
 
