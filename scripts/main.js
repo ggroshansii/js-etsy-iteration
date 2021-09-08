@@ -53,3 +53,5 @@ let madeBySellers = items.reduce((accum, element) => {
 }, 0);
 
 console.log(`${madeBySellers} were made by their sellers`);
+
+//THIS IS MY FIRST BRANCH
