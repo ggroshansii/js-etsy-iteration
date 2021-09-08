@@ -2,6 +2,7 @@
 ///THIS IS MY FIRST BRANCH!!!!!!!!!!
 
 
+
 ///////////////////AVERAGE PRICE OF ALL ITEMS///////////////////
 
 let average = (items.reduce((accum, element) => {
