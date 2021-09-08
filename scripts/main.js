@@ -36,24 +36,33 @@ console.log(`${itemsGBP[0].title} costs ${itemsGBP[0].price}`)
 
 ////////////////Items made of wood///////////////////////
 
-let woodenItems = items.filter(element => {
-    return element.materials.includes('wood');
+let woodenItems = _.reject(items, element => {
+    return !element.materials.includes('wood');
     //return element.title;
 }).forEach(element => {
-    //console.log(`${element.title} is made of wood`)
+    console.log(`${element.title} is made of wood`)
 });
 
 //////////////////Items with 8 or more materials///////////////////
 
-let eightOrMore = items.filter(element => {
+// let eightOrMore = items.filter(element => {
+//     return element.materials.length >= 8;
+// }).forEach(element => {
+//     console.log(`${element.title} has ${element.materials.length} materials`);
+//     element.materials.forEach(element => {
+//         console.log(`${element}`)
+//     });
+// });
 
-    return element.materials.length >= 8;
-}).forEach(element => {
-    //console.log(`${element.title} has ${element.materials.length} materials`);
-    element.materials.forEach(element => {
-        //console.log(`${element}`)
-    });
-});
+
+// let eightOrMore = _.filter(items, element => {
+//     return element.materials.length >= 8;
+// }).forEach(element => {
+//     console.log(`${element.title} has ${element.materials.length} materials`);
+//     element.materials.forEach(element => {
+//         console.log(`${element}`)
+//     });
+// });
 
 //////////////// Items made by sellers ///////////////////////
 
