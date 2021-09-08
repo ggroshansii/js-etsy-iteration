@@ -1,4 +1,7 @@
 
+///THIS IS MY FIRST BRANCH!!!!!!!!!!
+
+
 ///////////////////AVERAGE PRICE OF ALL ITEMS///////////////////
 
 let average = (items.reduce((accum, element) => {
@@ -54,4 +57,3 @@ let madeBySellers = items.reduce((accum, element) => {
 
 console.log(`${madeBySellers} were made by their sellers`);
 
-//THIS IS MY FIRST BRANCH
