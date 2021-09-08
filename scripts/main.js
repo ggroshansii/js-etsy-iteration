@@ -9,17 +9,22 @@
 //     return accum + element.price;
 // },0) / items.length).toFixed(2);
 
-let average = (_.reduce(items, (accum, element) => {
-    return accum + element.price;
-}, 0) / items.length).toFixed(2);
+let average =_.round(_.sumBy(items, element => {
+    return (element.price / items.length);
+}), 2);
 
 console.log(`$${average}`);
 
 //////////////ARRAY OF ITEMS THAT COST BETWEEN $14-$18//////////
 
+// let specificItems = items.filter(element => {
+//     return element.price > 14 && element.price < 18;
+// });
+
 let specificItems = items.filter(element => {
     return element.price > 14 && element.price < 18;
 });
+
 
 //console.log(specificItems);
 
