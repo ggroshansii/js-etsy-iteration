@@ -10,7 +10,7 @@ console.log(`$${average}`);
 //////////////ARRAY OF ITEMS THAT COST BETWEEN $14-$18//////////
 
 let specificItems = items.filter(element => {
-    return element.price >= 14 && element.price < 18;
+    return element.price >= 14 && element.price <= 18;
 });
 
 console.log(`Items that cost between $14.00 USD and $18.00 USD:\n`, specificItems);
